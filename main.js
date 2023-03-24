@@ -1,10 +1,10 @@
-const canvas = document.querySelector('#canvas')
+// const canvas = document.querySelector('#canvas')
 
-function fillCanvas(num) {
-    for (let i = 0; i < num; i++) {
-        let div = document.createElement('div')
-        canvas.appendChild(div)        
-    }
-}
+// function fillCanvas(num) {
+//     for (let i = 0; i < num * num; i++) {
+//         let div = document.createElement('div')
+//         canvas.appendChild(div)        
+//     }
+// }
 
-fillCanvas(16)
+// fillCanvas(16)
