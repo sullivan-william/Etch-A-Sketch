@@ -10,12 +10,21 @@ function fillCanvas(num) {
 
         // adds (num) divs with class of 'square' to each 'container' div in order to fill each row with a square
         for (let j = 0; j < num; j++) {
-            let container = document.querySelectorAll('.container')
-            let square = document.createElement('div')
-            square.classList.add('square')
-            container[i].appendChild(square)
+            let containers = document.querySelectorAll('.container')
+            let newSquare = document.createElement('div')
+            newSquare.classList.add('square')
+            containers[i].appendChild(newSquare)
         }
     }  
+
+    // adds event listener to each of the 'square' divs so that they change color on mouseover
+    let squares = document.querySelectorAll('.square')
+
+    for (let i = 0; i < squares.length; i++) {
+        squares[i].addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = 'black'
+        })
+    }
 }
 
 fillCanvas(16)
