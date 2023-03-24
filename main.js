@@ -1,4 +1,7 @@
 const canvas = document.querySelector('#canvas')
+let size = prompt('How many squares would you like on each side of your canvas?', 16)
+
+fillCanvas(size)
 
 function fillCanvas(num) {
 
@@ -27,6 +30,8 @@ function fillCanvas(num) {
     }
 }
 
-let size = prompt('How many squares would you like on each side of your canvas?', 16)
 
-fillCanvas(size)
+const reset = document.querySelector('.reset')
+reset.addEventListener('click', () => {
+    window.location.reload()
+})
