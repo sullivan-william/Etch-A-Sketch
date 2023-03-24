@@ -1,7 +1,13 @@
 const canvas = document.querySelector('#canvas')
-let size = prompt('How many squares would you like on each side of your canvas?', 16)
+let size = prompt('How many squares would you like on each side of your canvas? Must be a number between 1 and 100', 16)
 
-fillCanvas(size)
+if (size > 100 || size < 1 || isNaN(size)) {
+    size = prompt('How many squares would you like on each side of your canvas?', 16)
+    fillCanvas(size)
+} else {
+    fillCanvas(size)
+}
+
 
 function fillCanvas(num) {
 
