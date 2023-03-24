@@ -27,4 +27,6 @@ function fillCanvas(num) {
     }
 }
 
-fillCanvas(16)
+let size = prompt('How many squares would you like on each side of your canvas?', 16)
+
+fillCanvas(size)
